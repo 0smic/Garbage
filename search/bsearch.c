@@ -1,11 +1,17 @@
 #include <stdio.h>
 
+/*
+BEST CASE = O(1)
+AVERAGE CASE = O(log n)
+WORST CASE = it won't work lol 
+*/
+
 
 /*If you want you can implement the compare function inside the cbsearch  
 Which i already included in the arguments of the cbsearch*/
 int compar(int a , int b){
     if(a == b) return 0;
-    if (a<b) return -1
+    if (a<b) return -1;
     if (a>b) return 1;
 }
 
@@ -68,7 +74,6 @@ int cbsearch(int arr[],int x,int size, int (*compar)(int a,int b)){
         }
         if (index == 0){
           goto end;
-
         }
         printf("\nindex: %d  corres  : %d", t_idx, index);
     }
